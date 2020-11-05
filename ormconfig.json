@@ -1,14 +1,13 @@
-{
-  "type": "sqlite",
-  "database": "database.sqlite",
-  "synchronize": true,
-  "logging": true,
-  "entities": ["src/entity/**/*.ts"],
-  "migrations": ["src/migration/**/*.ts"],
-  "subscribers": ["src/subscriber/**/*.ts"],
-  "cli": {
-    "entitiesDir": "src/entity",
-    "migrationsDir": "src/migration",
-    "subscribersDir": "src/subscriber"
+[
+  {
+    "name": "mongo",
+    "type": "mongodb",
+    "url": "mongodb+srv://deploy:graphqldeploy@cluster0.mykd4.mongodb.net/graphql?retryWrites=true&w=majority",
+    "useNewUrlParser": true,
+    "synchronize": true,
+    "logging": true,
+    "entities": [
+      "./src/modulos/**/infra/typeorm/schemas/*.ts"
+    ]
   }
-}
+]

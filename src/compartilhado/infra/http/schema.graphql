@@ -1,0 +1,15 @@
+type Conta{
+    id:ID!,
+    conta:Int!,
+    saldo:Float!,
+}
+
+type Query{
+    saldo(conta:Int!):Float,
+}
+
+type Mutation{
+    criarConta(conta:Int!,valor:Float!) : Conta
+    sacar(conta:Int!,valor:Float!):Conta
+    depositar(conta:Int!,valor:Float!):Conta
+}
